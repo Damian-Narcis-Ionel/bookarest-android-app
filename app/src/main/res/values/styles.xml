@@ -1,0 +1,47 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAnimationStyle">@style/StandardActivityAnimation</item>
+    </style>
+
+    <style name="FirstActivityButtons" parent="Widget.AppCompat.Button">
+        <item name="android:minHeight">50dp</item>
+        <item name="android:minWidth">250dp</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/colorBackground</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="LoginEditText" parent="Widget.AppCompat.EditText">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="backgroundTint">@color/colorEditTextHighLight</item>
+        <item name="android:textCursorDrawable">@color/colorFirstActivityButtons</item>
+    </style>
+
+
+    <style name="SimpleText" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textAlignment">center</item>
+
+    </style>
+
+    <style name="StandardActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+
+    </style>
+
+
+    <style name="DialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="colorAccent">@color/colorFirstActivityButtons</item>
+        <item name="android:background">@drawable/dialog_rounded_corners</item>
+    </style>
+
+</resources>
