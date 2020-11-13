@@ -1,2 +1,2 @@
 # bookarest-android-app
-# Co-Worker:https://github.com/RareIsTheVoid    David Rares-Mihai
+# Co-Worker:[David Rares-Mihai](https://github.com/RareIsTheVoid)
