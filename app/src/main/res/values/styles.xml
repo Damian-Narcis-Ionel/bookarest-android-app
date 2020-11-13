@@ -44,4 +44,9 @@
         <item name="android:background">@drawable/dialog_rounded_corners</item>
     </style>
 
+
+    <style name="BottomNavBarFont">
+        <item name="fontFamily">@font/montserrat</item>
+    </style>
+
 </resources>

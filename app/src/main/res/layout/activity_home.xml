@@ -27,6 +27,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_navigation_menu"
+        app:itemTextAppearanceActive="@style/BottomNavBarFont"
         style="@style/Widget.Design.NavigationView"
         android:layout_marginBottom="0dp"
         android:background="@color/colorFirstActivityButtons"
