@@ -28,10 +28,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_navigation_menu"
         app:itemTextAppearanceActive="@style/BottomNavBarFont"
-        style="@style/Widget.Design.NavigationView"
         android:layout_marginBottom="0dp"
         android:background="@color/colorFirstActivityButtons"
         app:itemTextColor="@drawable/bottom_nav_item_color"
         app:itemIconTint="@drawable/bottom_nav_item_color"
+        app:itemBackground="@drawable/bottom_nav_item_background"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,4 +7,5 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBackground">#e7e9f3</color>
     <color name="colorEditTextHighLight">#202020</color>
+    <color name ="colorNavItemSelectedBackground">#5A5A5A</color>
 </resources>

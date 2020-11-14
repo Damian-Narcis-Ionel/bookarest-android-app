@@ -23,9 +23,11 @@ public class activity_home extends AppCompatActivity implements BottomNavigation
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_home);
+
         loadFragment(new fragment_home());
 
         BottomNavigationView navigation = findViewById(R.id.nav_home);
+
         navigation.setOnNavigationItemSelectedListener(this);
 
     }
