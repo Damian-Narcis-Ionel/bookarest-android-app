@@ -88,6 +88,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_signup_email"
         android:inputType="textPassword"
+        app:passwordToggleEnabled="true"
         >
     //de facut show password in din java
     </EditText>
@@ -107,6 +108,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/et_signup_password"
+        android:fontFamily="@font/montserrat"
         >
 
     </Button>
@@ -123,9 +125,10 @@
         android:text="@string/tv_already_a_member"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_signup_signup"
-        android:clickable="true">
+        app:layout_constraintTop_toBottomOf="@id/button_signup_signup">
 
     </TextView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
