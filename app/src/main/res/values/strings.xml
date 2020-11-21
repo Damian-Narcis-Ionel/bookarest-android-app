@@ -35,4 +35,31 @@
     <string name="tv_profile_number_value">+40xxxxxxxxx</string>
     <string name="tv_profile_sex">Sex:</string>
     <string name="tv_profile_sex_value">-</string>
+    <string name="tv_profile_birthdate">Birthday</string>
+    <string name="tv_profile_birthdate_value">01-Jan-1900</string>
+    <string name="tv_profile_country">Country:</string>
+    <string name="tv_profile_country_value">-</string>
+    <string name="tv_profile_favourite_genres">Favourite genres:</string>
+    <string name="tv_my_books_want_to_read">want to read</string>
+
+    <string-array name="spinner_profile_favorite_genres">
+        <item>Biography</item>
+        <item>Classics</item>
+        <item>Crime</item>
+        <item>Fiction</item>
+        <item>Fantasy</item>
+        <item>History</item>
+        <item>Horror</item>
+        <item>Manga</item>
+        <item>Comics</item>
+        <item>Nonfiction</item>
+        <item>Poetry</item>
+        <item>Philosophy</item>
+        <item>Psychology</item>
+        <item>Draga</item>
+        <item>Young Adult</item>
+        <item>Children\'s</item>
+        <item>Science</item>
+        <item>Religion</item>
+    </string-array>
 </resources>

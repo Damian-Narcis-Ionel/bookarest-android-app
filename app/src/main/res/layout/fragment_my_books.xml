@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment_my_books">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment_my_books"
+    android:background='@color/colorBackground'
+    >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+
+    <FrameLayout
+
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="my books" />
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_max="100dp"
+        app:layout_constraintWidth_max="100dp"
+        >
 
-</FrameLayout>
+
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/default_profile_picture"
+             android:background="@drawable/profile_picture_shape"
+
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_my_books_want_to_read"
+            android:fontFamily="@font/montserrat"/>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

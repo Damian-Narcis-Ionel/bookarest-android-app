@@ -23,15 +23,14 @@
         android:id="@+id/nav_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/colorFirstActivityButtons"
+        app:itemBackground="@drawable/bottom_nav_item_background"
+        app:itemIconTint="@drawable/bottom_nav_item_color"
+        app:itemTextAppearanceActive="@style/BottomNavBarFont"
+        app:itemTextColor="@drawable/bottom_nav_item_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_navigation_menu"
-        app:itemTextAppearanceActive="@style/BottomNavBarFont"
-        android:layout_marginBottom="0dp"
-        android:background="@color/colorFirstActivityButtons"
-        app:itemTextColor="@drawable/bottom_nav_item_color"
-        app:itemIconTint="@drawable/bottom_nav_item_color"
-        app:itemBackground="@drawable/bottom_nav_item_background"
-        />
+        app:menu="@menu/bottom_navigation_menu" />
 </androidx.constraintlayout.widget.ConstraintLayout>
