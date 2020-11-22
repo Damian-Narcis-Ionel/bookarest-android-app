@@ -44,6 +44,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_logo"
+        android:textStyle="bold"
         >
 
     </Button>
@@ -64,7 +65,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_login"
-        android:fontFamily="@font/montserrat">
+        android:fontFamily="@font/montserrat"
+        android:textStyle="bold"
+        >
 
 
     </Button>

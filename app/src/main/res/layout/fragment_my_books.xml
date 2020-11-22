@@ -5,38 +5,170 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment_my_books"
-    android:background='@color/colorBackground'
-    >
-
-
+    android:background="@color/colorBackground">
 
     <FrameLayout
-
+        android:id="@+id/frame_layout_want_to_read"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@id/frame_layout_currently_reading"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_max="100dp"
-        app:layout_constraintWidth_max="100dp"
-        >
+        app:layout_constraintHeight_max="150dp"
 
+        app:layout_constraintHeight_min="150dp"
+        app:layout_constraintStart_toStartOf="parent">
 
-         <ImageView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:src="@drawable/default_profile_picture"
-             android:background="@drawable/profile_picture_shape"
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="35dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/profile_picture_shape"
+            android:src="@drawable/default_profile_picture" />
 
-        />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="55dp"
+            android:layout_marginBottom="35dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/profile_picture_shape"
+            android:src="@drawable/default_profile_picture" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|bottom"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="35dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/profile_picture_shape"
+            android:src="@drawable/default_profile_picture" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:fontFamily="@font/montserrat"
             android:text="@string/tv_my_books_want_to_read"
-            android:fontFamily="@font/montserrat"/>
+            android:textSize="25dp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_layout_currently_reading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_max="150dp"
+        app:layout_constraintHeight_min="150dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="35dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/profile_picture_shape"
+            android:src="@drawable/default_profile_picture" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="55dp"
+            android:layout_marginBottom="35dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/profile_picture_shape"
+            android:src="@drawable/default_profile_picture" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|bottom"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="35dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/profile_picture_shape"
+            android:src="@drawable/default_profile_picture" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/tv_my_books_currently_reading"
+            android:textSize="25dp"
+            android:textStyle="bold" />
 
     </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_layout_read"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:minHeight="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_max="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frame_layout_currently_reading">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="35dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/profile_picture_shape"
+            android:src="@drawable/default_profile_picture" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="55dp"
+            android:layout_marginBottom="35dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/profile_picture_shape"
+            android:src="@drawable/default_profile_picture" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|bottom"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="35dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/profile_picture_shape"
+            android:src="@drawable/default_profile_picture" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/tv_my_books_read"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
