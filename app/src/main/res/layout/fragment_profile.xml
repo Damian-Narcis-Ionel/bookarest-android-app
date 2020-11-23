@@ -63,7 +63,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintWidth_max="150dp"
-            app:layout_constraintWidth_min="150dp" />
+            app:layout_constraintWidth_min="150dp"
+            android:foreground="@drawable/profile_picture_shape"
+            android:scaleType="fitXY"/>
 
         <TextView
             android:id="@+id/tv_profile_name"

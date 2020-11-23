@@ -20,9 +20,14 @@ public class fragment_home extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_home, container, false);
-        img = v.findViewById(R.id.img_home_currently_reading);
-        img.setClipToOutline(true);
+        handleImage(v,img,R.id.img_home_currently_reading);
 
         return v;
+    }
+
+
+    private void handleImage(View view, ImageView imageView, int id){
+        imageView = view.findViewById(id);
+        imageView.setClipToOutline(true);
     }
 }
