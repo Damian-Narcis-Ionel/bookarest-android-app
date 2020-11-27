@@ -48,6 +48,8 @@
     <string name="tv_home_you_are_currently_reading">You are currently reading:</string>
     <string name="tv_home_cr_title">Title</string>
     <string name="tv_home_cr_author">Author</string>
+    <string name="tv_home_progress_percentage">0%</string>
+    <string name="button_home_update_progress">Update progress</string>
 
     <string-array name="spinner_profile_favorite_genres">
         <item>Biography</item>

@@ -1,12 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="ring"
-    android:thickness="4dp"
-    android:innerRadiusRatio="2.5"
-    android:useLevel="true"
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
-    >
 
-    <solid android:color="@color/colorFirstActivityButtons"/>
+    <item>
+        <rotate
+            >
+            <shape
+                android:shape="ring"
+                android:thicknessRatio="16"
+                android:useLevel="false"
 
-</shape>
+                >
+                <solid android:color="@color/colorProgressBarBackground" />
+            </shape>
+        </rotate>
+    </item>
+
+
+    <item>
+        <rotate
+            android:fromDegrees="-90"
+            android:toDegrees="-90"
+            >
+            <shape
+                android:shape="ring"
+                android:thicknessRatio="16"
+                android:useLevel="true">
+                <solid android:color="@color/colorFirstActivityButtons" />
+            </shape>
+        </rotate>
+    </item>
+
+</layer-list>
