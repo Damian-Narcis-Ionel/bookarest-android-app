@@ -47,7 +47,7 @@
             android:textColor="@color/colorBackground"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinner_profile_favorite_genres" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_profile_country_value" />
         //==========[Email]==========//
 
         <ImageView
@@ -135,10 +135,14 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
-            android:text="@string/tv_profile_email_value"
+            android:text=""
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/tv_profile_email"
-            app:layout_constraintTop_toBottomOf="@id/tv_profile_name">
+            app:layout_constraintTop_toBottomOf="@id/tv_profile_name"
+            android:autoSizeTextType="uniform"
+            android:maxLines="1"
+
+            >
 
         </TextView>
 
@@ -234,36 +238,6 @@
             android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_profile_birthdate_value"
-            />
-
-
-        //favorite genres
-
-        <TextView
-            android:id="@+id/tv_profile_favourite_genres"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/montserrat"
-            android:text="@string/tv_profile_favourite_genres"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@id/tv_profile_country"
-            app:layout_constraintStart_toStartOf="parent"
-            >
-
-        </TextView>
-
-        <Spinner
-            android:id="@+id/spinner_profile_favorite_genres"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="32dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_profile_country_value"
-
             />
 
 

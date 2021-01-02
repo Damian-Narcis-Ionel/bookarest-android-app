@@ -22,19 +22,13 @@ public class fragment_profile extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
 
         handleImage(rootView,profilePicture,R.id.profile_picture);
-        initializeSpinner(rootView);
 
         return rootView;
 
 
     }
 
-    private void initializeSpinner(View view){
-        Spinner spinner =(Spinner)view.findViewById(R.id.spinner_profile_favorite_genres);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this.getContext(),R.array.spinner_profile_favorite_genres, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-    }
+
 
     private void handleImage(View view, ImageView imageView, int id){
         imageView = view.findViewById(id);

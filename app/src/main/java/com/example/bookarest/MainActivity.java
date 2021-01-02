@@ -1,6 +1,7 @@
 package com.example.bookarest;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -11,11 +12,14 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     Button switchToLogin;
@@ -23,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     activity_login actLogin;
     ActivitySignup actSignUp;
     TextView tv_terms_of_service;
+    private AppDb database;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +62,28 @@ public class MainActivity extends AppCompatActivity {
                 showAlert(getString(R.string.terms_of_service_lorem),MainActivity.this);
             }
         });
+        database = Room.databaseBuilder(this,AppDb.class, "BookarestDatabase").allowMainThreadQueries().build();
+
+        Author a2 = new Author("Rares");
+        Author a3 = new Author("Damian");
+        database.authorDAO().insertAuthor(new Author("Damian"));
+        database.authorDAO().insertAuthor(new Author("Rares"));
+        database.authorDAO().insertAuthor(new Author("Rares2"));
+//        database.bookDAO().insertBook(new Book("Salutarea",1,100));
+//        database.bookDAO().insertBook(new Book("Salutarea2",2,101));
+//        database.bookDAO().insertBook(new Book("SalutareaJandarmile",2,301));
+
+        List<AuthorWithBooks> lista = database.authorDAO().getAuthorsWithBooks();
+
+//        for(AuthorWithBooks auth : lista){
+//            Log.v("testing",auth.toString());
+//        }
+
+
+        List<Author> autori = database.authorDAO().getAllAuthors();
+        for(Author auth : autori){
+           Log.v("testing",auth.toString());
+        }
     }
 
     private void initialization() {
@@ -90,4 +118,9 @@ public class MainActivity extends AppCompatActivity {
         dlg.show();
         dlg.getWindow().setLayout(1000,1600);
     }
+
+    private void insertAuthors(){
+
+    }
+
 }
