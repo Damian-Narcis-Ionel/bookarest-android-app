@@ -19,6 +19,9 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -62,36 +65,62 @@ public class MainActivity extends AppCompatActivity {
                 showAlert(getString(R.string.terms_of_service_lorem),MainActivity.this);
             }
         });
-        database = Room.databaseBuilder(this,AppDb.class, "BookarestDatabase").allowMainThreadQueries().build();
 
-        Author a2 = new Author("Rares");
-        Author a3 = new Author("Damian");
-        database.authorDAO().insertAuthor(new Author("Damian"));
-        database.authorDAO().insertAuthor(new Author("Rares"));
-        database.authorDAO().insertAuthor(new Author("Rares2"));
-//        database.bookDAO().insertBook(new Book("Salutarea",1,100));
-//        database.bookDAO().insertBook(new Book("Salutarea2",2,101));
-//        database.bookDAO().insertBook(new Book("SalutareaJandarmile",2,301));
+        List<Book> books = database.bookDAO().getAllBooks();
+        List<Author> authors = database.authorDAO().getAllAuthors();
+        List<AuthorWithBooks> authorWithBooks = database.authorDAO().getAuthorsWithBooks();
+        List<UserBookCrossRef> cross = database.UserBookCrossRefDAO().getAllUserBookCrossRefByIdAndCategory(1,2);
 
-        List<AuthorWithBooks> lista = database.authorDAO().getAuthorsWithBooks();
 
-//        for(AuthorWithBooks auth : lista){
-//            Log.v("testing",auth.toString());
+//        for(Book b : books){
+//            Log.v("test",b.toString());
+//        }
+//
+//        for(Author b : authors){
+//            Log.v("test",b.toString());
+//        }
+//
+//        for(AuthorWithBooks b : authorWithBooks){
+//            Log.v("test",b.toString());
 //        }
 
-
-        List<Author> autori = database.authorDAO().getAllAuthors();
-        for(Author auth : autori){
-           Log.v("testing",auth.toString());
+        for(UserBookCrossRef b : cross){
+            Log.v("test",b.toString());
         }
+
     }
 
     private void initialization() {
         switchToLogin = findViewById(R.id.button_login);
         switchToSignup = findViewById(R.id.button_signup);
-        actLogin= new activity_login();
-        actSignUp=new ActivitySignup();
-        tv_terms_of_service=findViewById(R.id.tv_terms_of_service);
+        actLogin = new activity_login();
+        actSignUp = new ActivitySignup();
+        tv_terms_of_service = findViewById(R.id.tv_terms_of_service);
+        database = Room.databaseBuilder(this, AppDb.class, "test1").allowMainThreadQueries().build();
+        insert();
+
+
+        database.userDAO().insertUser(new User(1, "dami007smecheru", "suntsmecher", "Narcis", "Damian", "123aloalo", 1, "23/06/1999", "Romania"));
+        database.userDAO().insertUser(new User(2, "rare007smecheru", "suntraressmecher", "Rares", "David", "1234aloalo", 2, "23/05/2020", "Romania"));
+
+
+        database.UserBookCrossRefDAO().insertUserBookCrossRef(new UserBookCrossRef(1,3,1));
+        database.UserBookCrossRefDAO().insertUserBookCrossRef(new UserBookCrossRef(1,2,2));
+        database.UserBookCrossRefDAO().insertUserBookCrossRef(new UserBookCrossRef(1,1,3));
+        database.UserBookCrossRefDAO().insertUserBookCrossRef(new UserBookCrossRef(2,3,1));
+
+
+
+    }
+
+    private void insert(){
+        database.authorDAO().insertAuthor(new Author(1, "damian"));
+        database.authorDAO().insertAuthor(new Author(2, "Rares"));
+        database.bookDAO().insertBook(new Book(1, "carte1", 1, 12));
+        database.bookDAO().insertBook(new Book(2, "carte2", 1, 124));
+        database.bookDAO().insertBook(new Book(3, "carte3", 1, 125));
+        database.bookDAO().insertBook(new Book(4, "carte4", 2, 122));
+        database.bookDAO().insertBook(new Book(5, "carte5", 2, 121));
     }
 
     private void switchActivities(AppCompatActivity activity) {

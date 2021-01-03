@@ -10,6 +10,7 @@ import java.util.List;
 public class AuthorWithBooks {
     @Embedded
     public Author author;
+
     @Relation(
             parentColumn = "authorId",
             entityColumn = "AuthorId"

@@ -6,21 +6,26 @@ import androidx.room.PrimaryKey;
 
 @Entity(tableName = "Books")
 public class Book {
-    @PrimaryKey(autoGenerate = true)
+    @PrimaryKey()
     private int bookId;
+
     @ColumnInfo(name="Title")
     private String title;
+
     @ColumnInfo(name = "AuthorId")
     private int authorOfBookId;
+
     @ColumnInfo(name = "NumberOfPages")
     private int numberOfPages;
 
-    public Book(String title, int authorId, int numberOfPages) {
-        this.authorOfBookId = authorId;
+    public Book(int bookId, String title, int authorOfBookId, int numberOfPages) {
+        this.bookId = bookId;
         this.title = title;
+        this.authorOfBookId = authorOfBookId;
         this.numberOfPages = numberOfPages;
     }
 
+    public Book(){}
 
     public int getBookId() {
         return bookId;

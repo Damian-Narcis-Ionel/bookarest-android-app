@@ -13,12 +13,18 @@ import java.util.List;
 public interface AuthorDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     public void insertAuthor(Author author);
+
     @Delete
     public void deleteAuthor(Author author);
+
     @Query("SELECT * FROM Authors")
-    List<Author> getAllAuthors();
+    public List<Author> getAllAuthors();
+
     @Transaction
     @Query("SELECT * FROM Authors")
     public List<AuthorWithBooks> getAuthorsWithBooks();
+
+    @Query("DELETE FROM AUTHORS")
+    public void deleteAuthors();
 
 }
