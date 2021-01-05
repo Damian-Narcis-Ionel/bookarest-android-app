@@ -2,8 +2,10 @@ package com.example.bookarest;
 
 import androidx.room.Entity;
 
+import java.io.Serializable;
+
 @Entity(tableName ="UserBookCrossRef" , primaryKeys = {"userId","bookId"})
-public class UserBookCrossRef {
+public class UserBookCrossRef implements Serializable {
     public int userId;
     public int bookId;
     public int category;

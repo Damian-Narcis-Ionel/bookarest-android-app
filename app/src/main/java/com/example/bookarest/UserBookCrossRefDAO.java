@@ -25,4 +25,7 @@ public interface UserBookCrossRefDAO {
 
     @Query("SELECT * FROM userbookcrossref where userId=:id and category=:category")
     public List<UserBookCrossRef> getAllUserBookCrossRefByIdAndCategory(int id, int category);
+
+    @Query("SELECT bookId FROM userbookcrossref WHERE userId=:id AND category=:category")
+    public List<Integer> getAllUserBooksIdRefByIdAndCategory(int id,int category);
 }

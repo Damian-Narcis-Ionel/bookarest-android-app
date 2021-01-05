@@ -19,5 +19,8 @@ public interface BookDAO {
     @Query("SELECT * FROM books")
     List<Book> getAllBooks();
 
+    @Query("SELECT * FROM books WHERE bookId=:id")
+    Book getBookById(int id);
+
 
 }

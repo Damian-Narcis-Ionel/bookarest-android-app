@@ -24,4 +24,16 @@ public interface UserDAO {
     @Transaction
     @Query("SELECT * FROM Users")
     List<UserWithBooks> getUserWithBooks();
+
+    @Query("SELECT * FROM USERS WHERE Email=:email")
+    User getUserByEmail(String email);
+
+    @Query("SELECT COUNT(*) FROM USERS WHERE Email=:email and password =:password")
+    int getMatchingUser(String email, String password);
+
+    @Query("SELECT COUNT(*) FROM USERS WHERE Email=:email")
+    int checkExistingEmail(String email);
+
+    @Query("SELECT MAX(userId) FROM users")
+    int getMaxUserId();
 }

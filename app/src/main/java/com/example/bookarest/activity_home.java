@@ -4,7 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
@@ -14,7 +16,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
 public class activity_home extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
-
+    CurrentUser currentUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,10 @@ public class activity_home extends AppCompatActivity implements BottomNavigation
         BottomNavigationView navigation = findViewById(R.id.nav_home);
 
         navigation.setOnNavigationItemSelectedListener(this);
+
+        currentUser = (CurrentUser) getIntent().getSerializableExtra("currentUser");
+        Log.v("testando",currentUser.toString());
+
 
     }
 

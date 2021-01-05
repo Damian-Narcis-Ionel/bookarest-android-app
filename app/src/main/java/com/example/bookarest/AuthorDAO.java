@@ -27,4 +27,7 @@ public interface AuthorDAO {
     @Query("DELETE FROM AUTHORS")
     public void deleteAuthors();
 
+    @Query("SELECT authors.Name FROM authors where authorId=:id")
+    public String getAuthorNameById(int id);
+
 }

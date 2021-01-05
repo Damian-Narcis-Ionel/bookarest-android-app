@@ -4,8 +4,10 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.io.Serializable;
+
 @Entity(tableName = "Users")
-public class User {
+public class User implements Serializable {
     @PrimaryKey()
     private int userId;
 
@@ -118,4 +120,18 @@ public class User {
     }
 
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId=" + userId +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", sex=" + sex +
+                ", birthDate='" + birthDate + '\'' +
+                ", country='" + country + '\'' +
+                '}';
+    }
 }

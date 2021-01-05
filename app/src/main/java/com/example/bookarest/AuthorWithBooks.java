@@ -4,10 +4,11 @@ import androidx.room.Embedded;
 import androidx.room.Entity;
 import androidx.room.Relation;
 
+import java.io.Serializable;
 import java.util.List;
 
 
-public class AuthorWithBooks {
+public class AuthorWithBooks implements Serializable {
     @Embedded
     public Author author;
 
